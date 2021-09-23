@@ -1,20 +1,45 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+#Introduction
+It is my study project from relational databases. 
+Action plan:
+1. created a database
+2. generated some .csv files with test data. (random data generator like mockaroo)
+3. loaded database with sql loader
+4. created a data warehouse
+5. created procedures to transport data from database to data warehouse
+6. created some queries
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+One of the goals was to compare the execution time of queries.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+#Project structure:
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Project 
+   |
+   |--baza  <---- everything about databases
+   |    |
+   |    |--pliki_do_zaladowania_bazy <----- it's a folder with .csv, .ctl, .bad files. Resources to load to database.
+   |    |
+   |    |--baza.sql <---- sql file to create a database.
+   |    |
+   |    |--dane.bat <---- .bat file to load database using sql loader.
+   |    |
+   |    |--DatabaseDiagram.png <----- png file with ERD diagram of database
+   |
+   |--hurtownia  <---- everything about data warehouse
+   |    |
+   |    |--baza.sql <---- sql file to create a data warehouse.
+   |    |
+   |    |--dane.sql <---- sql file with procedures to transport resources from database to data warehouse
+   |    |
+   |    |--DatabaseDiagram.png <----- png file with ERD diagram of data warehouse
+   |
+   |--zapytania  <---- in this folder there are some queries to database and data warehouse
+   |    |
+   |    |--cube <---- sql queries with cube
+   |    |
+   |    |--funkcje rankingowe <---- sql queries with rank functions
+   |    |
+   |    |--okna czasowe <----- sql queries with window functions
+   |    |
+   |    |--partycje obliczeniowe <---- sql queries with partition by clause
+   |    |
+   |    |--rollup <----- sql queries with rollup
